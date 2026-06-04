@@ -82,7 +82,7 @@ const mobileMenuOpen = ref(false);
                         PT Bellatex Jaya Maju Bersama adalah perusahaan tekstil terkemuka yang berdedikasi tinggi dalam menghasilkan produk-produk berkualitas untuk memenuhi kebutuhan industri garmen dan masyarakat luas. Sejak didirikan, kami selalu mengedepankan inovasi, presisi, dan kepuasan pelanggan.
                     </p>
                     <p class="mb-6">
-                        Portal ini (Sistem Pengadaan Internal) dikembangkan sebagai wujud nyata dari komitmen kami menuju digitalisasi perusahaan. Melalui sistem yang terpusat ini, alur rantai pasok internal—mulai dari karyawan pabrik yang membutuhkan perlengkapan, hingga proses persetujuan oleh manajer dan pengeluaran barang oleh admin gudang—menjadi sepenuhnya transparan, cepat, dan bebas dari penggunaan kertas (Paperless).
+                        Portal ini dikembangkan sebagai wujud nyata dari komitmen kami menuju digitalisasi perusahaan. Melalui sistem yang terpusat ini, alur rantai pasok internal—mulai dari karyawan pabrik yang membutuhkan perlengkapan, hingga proses persetujuan oleh manajer dan pengeluaran barang oleh admin gudang—menjadi sepenuhnya transparan, cepat, dan bebas dari penggunaan kertas (Paperless).
                     </p>
                     <div class="mt-12">
                         <div class="border-l-4 border-[#001C8A] pl-4">
