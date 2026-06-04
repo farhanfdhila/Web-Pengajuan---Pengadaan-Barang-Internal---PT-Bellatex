@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('kontak');
+    Route::delete('/kontak/{id}', [App\Http\Controllers\KontakController::class, 'destroy'])->name('kontak.destroy')->middleware('role:approval');
 });
 
 // Admin Routes

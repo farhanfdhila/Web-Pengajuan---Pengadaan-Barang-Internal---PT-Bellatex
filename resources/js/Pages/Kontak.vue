@@ -1,6 +1,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, useForm, usePage } from '@inertiajs/vue3';
+import { computed } from 'vue';
 
 defineProps({
     users: {
@@ -8,6 +9,9 @@ defineProps({
         required: true
     }
 });
+
+const page = usePage();
+const isApproval = computed(() => page.props.auth?.user?.role === 'approval');
 
 const getRoleBadgeClass = (role) => {
     if (role === 'admin') return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 border-red-200';
@@ -18,6 +22,15 @@ const getRoleBadgeClass = (role) => {
 const getCleanWhatsAppNumber = (number) => {
     if (!number) return '';
     return number.toString().replace(/\D/g, '');
+};
+
+const deleteForm = useForm({});
+
+const hapusKontak = (user) => {
+    if (!confirm(`Hapus pengguna "${user.name}" dari direktori kontak?\n\nPengguna ini tidak memiliki nomor WhatsApp terdaftar.\nTindakan ini tidak dapat dibatalkan.`)) return;
+    deleteForm.delete(route('kontak.destroy', user.id), {
+        preserveScroll: true,
+    });
 };
 </script>
 
@@ -64,9 +77,24 @@ const getCleanWhatsAppNumber = (number) => {
                                         </svg>
                                         Chat WA
                                     </a>
-                                    <button v-else disabled class="w-full flex justify-center items-center gap-2 bg-gray-300 dark:bg-gray-700 text-gray-500 py-2 px-4 rounded-xl font-bold cursor-not-allowed">
-                                        Tidak ada WA
-                                    </button>
+                                    <div v-else class="flex flex-col gap-2">
+                                        <div class="w-full flex justify-center items-center gap-2 bg-gray-300 dark:bg-gray-700 text-gray-500 py-2 px-4 rounded-xl font-bold cursor-not-allowed select-none">
+                                            Tidak ada WA
+                                        </div>
+                                        <button
+                                            v-if="isApproval"
+                                            @click="hapusKontak(user)"
+                                            :disabled="deleteForm.processing"
+                                            class="w-full flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white py-2 px-4 rounded-xl font-bold transition shadow-md hover:shadow-lg"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                            </svg>
+                                            {{ deleteForm.processing ? 'Menghapus...' : 'Hapus Pengguna' }}
+                                        </button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

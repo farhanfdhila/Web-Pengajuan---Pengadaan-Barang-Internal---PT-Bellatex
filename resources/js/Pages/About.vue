@@ -84,14 +84,10 @@ const mobileMenuOpen = ref(false);
                     <p class="mb-6">
                         Portal ini (Sistem Pengadaan Internal) dikembangkan sebagai wujud nyata dari komitmen kami menuju digitalisasi perusahaan. Melalui sistem yang terpusat ini, alur rantai pasok internal—mulai dari karyawan pabrik yang membutuhkan perlengkapan, hingga proses persetujuan oleh manajer dan pengeluaran barang oleh admin gudang—menjadi sepenuhnya transparan, cepat, dan bebas dari penggunaan kertas (Paperless).
                     </p>
-                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="mt-12">
                         <div class="border-l-4 border-[#001C8A] pl-4">
-                            <h3 class="text-xl font-bold text-white mb-2">Visi Kami</h3>
+                            <h3 class="text-xl font-bold text-white mb-2">Visi Misi</h3>
                             <p class="text-gray-400 text-base">Membantu & Mensejahterakan lingkungan sekitar terutama bagi kaum yatim piatu & fakir miskin</p>
-                        </div>
-                        <div class="border-l-4 border-[#424242] pl-4">
-                            <h3 class="text-xl font-bold text-white mb-2">Misi Internal</h3>
-                            <p class="text-gray-400 text-base">Menciptakan lingkungan kerja yang efisien dengan menyediakan alat pendukung pengadaan yang akurat secara real-time.</p>
                         </div>
                     </div>
                 </div>
