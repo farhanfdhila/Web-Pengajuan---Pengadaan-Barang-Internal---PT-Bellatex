@@ -119,7 +119,7 @@ const submit = () => {
                     <div class="text-center mt-4">
                         <p class="text-sm text-gray-400">
                             Belum punya akun? 
-                            <Link v-if="canResetPassword" :href="route('password.request')" class="font-bold text-blue-400 hover:text-blue-300 transition">daftar disini</Link>
+                            <Link v-if="canRegister" :href="route('register')" class="font-bold text-blue-400 hover:text-blue-300 transition">Daftar disini</Link>
                         </p>
                     </div>
                 </form>
