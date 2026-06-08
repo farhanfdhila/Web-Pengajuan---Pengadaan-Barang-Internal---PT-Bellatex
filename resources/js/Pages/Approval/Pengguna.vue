@@ -85,14 +85,14 @@ const deleteUser = (id) => {
                     <span class="block sm:inline">{{ $page.props.flash.error }}</span>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                <div class="bg-gray-800/40 backdrop-blur-2xl border border-white/10 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:rounded-3xl">
+                    <div class="p-6 text-gray-100">
                         <h3 class="text-lg font-bold mb-4">Daftar Admin & Karyawan</h3>
                         
                         <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse">
                                 <thead>
-                                    <tr class="border-b border-gray-700 bg-gray-50 dark:bg-gray-700/50">
+                                    <tr class="border-b border-white/10 bg-gray-900/30">
                                         <th class="py-3 px-4 font-semibold">Nama Lengkap</th>
                                         <th class="py-3 px-4 font-semibold">Email</th>
                                         <th class="py-3 px-4 font-semibold">Peran (Role)</th>
@@ -101,7 +101,7 @@ const deleteUser = (id) => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="user in pengguna" :key="user.id" class="border-b border-gray-700 hover:bg-gray-700/50 transition">
+                                    <tr v-for="user in pengguna" :key="user.id" class="border-b border-white/10 hover:bg-gray-700/30 transition">
                                         <td class="py-3 px-4 font-semibold text-blue-400">{{ user.name }}</td>
                                         <td class="py-3 px-4">{{ user.email }}</td>
                                         <td class="py-3 px-4">

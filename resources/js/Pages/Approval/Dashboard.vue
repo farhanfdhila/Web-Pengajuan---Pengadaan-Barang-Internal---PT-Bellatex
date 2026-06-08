@@ -55,8 +55,8 @@ const updateStatus = (id, status) => {
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                <div class="bg-gray-800/40 backdrop-blur-2xl border border-white/10 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:rounded-3xl">
+                    <div class="p-6 text-gray-100">
                         <div class="flex justify-between items-center mb-4">
                             <div>
                                 <h3 class="text-lg font-bold">Antrean Persetujuan</h3>
@@ -71,7 +71,7 @@ const updateStatus = (id, status) => {
                         <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse">
                                 <thead>
-                                    <tr class="border-b border-gray-700">
+                                    <tr class="border-b border-white/10">
                                         <th class="py-3 px-4">Tanggal</th>
                                         <th class="py-3 px-4">Pemohon</th>
                                         <th class="py-3 px-4">Alasan Permintaan</th>
@@ -81,7 +81,7 @@ const updateStatus = (id, status) => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="p in permintaans" :key="p.id" class="border-b border-gray-700 hover:bg-gray-700/50 transition">
+                                    <tr v-for="p in permintaans" :key="p.id" class="border-b border-white/10 hover:bg-gray-700/30 transition">
                                         <td class="py-3 px-4">{{ new Date(p.tanggal_permintaan).toLocaleDateString('id-ID') }}</td>
                                         <td class="py-3 px-4 font-semibold text-blue-400">{{ p.user.name }}</td>
                                         <td class="py-3 px-4">{{ p.keterangan || '-' }}</td>

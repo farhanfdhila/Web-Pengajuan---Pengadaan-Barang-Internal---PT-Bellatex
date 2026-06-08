@@ -44,18 +44,18 @@ const hapusKontak = (user) => {
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                <div class="bg-gray-800/40 backdrop-blur-2xl border border-white/10 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:rounded-3xl">
+                    <div class="p-6 text-gray-100">
                         <div class="mb-6">
-                            <h3 class="text-2xl font-extrabold text-[#001C8A] dark:text-blue-400 mb-2">Direktori Kontak</h3>
-                            <p class="text-gray-500 dark:text-gray-400">Daftar kontak WhatsApp seluruh pengguna sistem (Admin, Approval, Karyawan).</p>
+                            <h3 class="text-2xl font-extrabold text-blue-400 mb-2">Direktori Kontak</h3>
+                            <p class="text-gray-400">Daftar kontak WhatsApp seluruh pengguna sistem (Admin, Approval, Karyawan).</p>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div v-for="user in users" :key="user.id" class="border border-gray-200 dark:border-gray-700 rounded-2xl p-6 bg-gray-50 dark:bg-gray-900/50 hover:shadow-lg transition-shadow duration-300">
+                            <div v-for="user in users" :key="user.id" class="border border-white/10 rounded-2xl p-6 bg-gray-900/50 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-shadow duration-300">
                                 <div class="flex items-start justify-between mb-4">
                                     <div>
-                                        <h4 class="font-bold text-lg text-gray-900 dark:text-white">{{ user.name }}</h4>
+                                        <h4 class="font-bold text-lg text-white">{{ user.name }}</h4>
                                         <span :class="['inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border mt-1 capitalize', getRoleBadgeClass(user.role)]">
                                             {{ user.role }}
                                         </span>
@@ -65,8 +65,8 @@ const hapusKontak = (user) => {
                                     </div>
                                 </div>
                                 
-                                <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                                <div class="mt-4 pt-4 border-t border-white/10">
+                                    <p class="text-sm text-gray-400 mb-3">
                                         <span class="block text-xs font-semibold uppercase tracking-wider mb-1">Nomor WhatsApp</span>
                                         {{ user.no_hp || 'Belum diatur' }}
                                     </p>
@@ -78,7 +78,7 @@ const hapusKontak = (user) => {
                                         Chat WA
                                     </a>
                                     <div v-else class="flex flex-col gap-2">
-                                        <div class="w-full flex justify-center items-center gap-2 bg-gray-300 dark:bg-gray-700 text-gray-500 py-2 px-4 rounded-xl font-bold cursor-not-allowed select-none">
+                                        <div class="w-full flex justify-center items-center gap-2 bg-gray-700 text-gray-400 py-2 px-4 rounded-xl font-bold cursor-not-allowed select-none">
                                             Tidak ada WA
                                         </div>
                                         <button
