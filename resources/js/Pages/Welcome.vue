@@ -15,7 +15,7 @@ const mobileMenuOpen = ref(false);
 </script>
 
 <template>
-    <Head title="Beranda - PT Bellatex" />
+    <Head title="Beranda" />
 
     <div class="min-h-screen bg-gradient-to-br from-gray-900 via-[#111827] to-slate-900 text-gray-100 font-sans selection:bg-blue-500 selection:text-white flex flex-col relative overflow-hidden">
         <!-- Navigation -->
