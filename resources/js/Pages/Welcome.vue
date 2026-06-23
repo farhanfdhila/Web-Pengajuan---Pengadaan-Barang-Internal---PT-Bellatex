@@ -76,13 +76,7 @@ const mobileMenuOpen = ref(false);
             <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 w-full">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="relative z-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600 text-sm font-bold mb-6 shadow-sm">
-                            <span class="relative flex h-2.5 w-2.5">
-                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
-                            </span>
-                            Sistem Pengadaan Internal v2.0
-                        </div>
+
                         <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-6">
                             Transformasi <br />
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Digitalisasi</span> <br />
@@ -104,21 +98,20 @@ const mobileMenuOpen = ref(false);
                         </div>
                     </div>
                     <div class="hidden md:block">
-                        <!-- Abstract Visual representation of dashboard/warehouse -->
-                        <div class="relative w-full aspect-square max-w-md mx-auto">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-3xl opacity-30 transform rotate-6 scale-105 animate-pulse"></div>
-                            <div class="absolute inset-0 bg-gray-800/40 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-6 flex flex-col gap-4 transform -rotate-3 transition-transform hover:rotate-0 duration-500">
-                                <div class="flex justify-between items-center">
-                                    <div class="h-8 w-1/3 bg-gray-700 rounded-lg animate-pulse"></div>
-                                    <div class="h-8 w-8 bg-blue-500/30 rounded-full"></div>
+                        <!-- Galeri Foto -->
+                        <div class="relative w-full max-w-md mx-auto">
+                            <h2 class="text-2xl font-bold text-white mb-4">Galeri</h2>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="group relative overflow-hidden rounded-2xl border border-white/10 shadow-xl">
+                                    <img src="/images/gudang.jpg" alt="Gudang Operasional" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
-                                <div class="grid grid-cols-2 gap-4 mt-4">
-                                    <div class="h-32 bg-gradient-to-br from-blue-900/50 to-indigo-900/50 border border-blue-500/20 rounded-2xl shadow-inner"></div>
-                                    <div class="h-32 bg-gray-700/50 border border-gray-600/50 rounded-2xl shadow-sm"></div>
+                                <div class="group relative overflow-hidden rounded-2xl border border-white/10 shadow-xl">
+                                    <img src="/images/bellatex.jpg" alt="Gedung Bellatex" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
-                                <div class="h-4 w-full bg-gray-700 rounded mt-auto"></div>
-                                <div class="h-4 w-2/3 bg-gray-700 rounded"></div>
                             </div>
+                            <p class="text-sm text-gray-400 mt-4 font-medium">Beberapa foto gudang operasional</p>
                         </div>
                     </div>
                 </div>
